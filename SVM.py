@@ -26,15 +26,12 @@ print(train_x_0.shape, train_y_0.shape)
 # print(train_y_0[0:10]) -> [1,1,1,2,1,0,0,2,0,0]
 
 
-
-
-# Plotting with PCA 
+#----------------- Plotting with PCA -----------------#
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.decomposition import PCA
 
-# Assuming your x and y variables are named x_data and y_data
 x_data = train_x_0
 y_data = train_y_0
 
@@ -60,6 +57,6 @@ cbar.set_label('Class Label')
 # Show the plot
 plt.show()
 
+#------------------------------------------------------#
 
-
-
+#----------------- Support vector machine -----------------#
