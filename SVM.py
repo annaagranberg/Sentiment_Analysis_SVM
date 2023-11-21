@@ -28,6 +28,8 @@ print(test_x_0.shape, test_y_0.shape)
 
 #----------------- Plotting with PCA -----------------#
 
+#----------------- Stäng ner pop up fönstret med PCA för att se resultatet av SVM -----------------#
+
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.decomposition import PCA
@@ -123,29 +125,29 @@ print(f"Accuracy: {accuracy * 100:.2f}%")  # Print the accuracy of the trained S
 
 #------------------------- PLOT -----------------------------#
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-scatter = ax.scatter(test_x_0[:, 0], test_x_0[:, 1], test_x_0[:, 2], c=test_y_0, cmap='viridis', marker='o', label='Data Points')
+#fig = plt.figure()
+#ax = fig.add_subplot(111, projection='3d')
+#scatter = ax.scatter(test_x_0[:, 0], test_x_0[:, 1], test_x_0[:, 2], c=test_y_0, cmap='viridis', marker='o', label='Data Points')
 
 # Plot the decision boundary (hyperplane)
-xlim = ax.get_xlim()
-ylim = ax.get_ylim()
-zlim = ax.get_zlim()
+#xlim = ax.get_xlim()
+#ylim = ax.get_ylim()
+#zlim = ax.get_zlim()
 
-xx, yy, zz = np.meshgrid(np.linspace(xlim[0], xlim[1], 10), np.linspace(ylim[0], ylim[1], 10), np.linspace(zlim[0], zlim[1], 10))
-xyz = np.column_stack([xx.ravel(), yy.ravel(), zz.ravel()])
+#xx, yy, zz = np.meshgrid(np.linspace(xlim[0], xlim[1], 10), np.linspace(ylim[0], ylim[1], 10), np.linspace(zlim[0], zlim[1], 10))
+#xyz = np.column_stack([xx.ravel(), yy.ravel(), zz.ravel()])
 
-Z = svm_model.predict(xyz)
-Z = Z.reshape(xx.shape)
+#Z = svm_model.predict(xyz)
+#Z = Z.reshape(xx.shape)
 
-ax.contour3D(xx, yy, Z, colors='k', levels=[-1, 0, 1], alpha=0.5, linestyles=['--', '-', '--'])
+#ax.contour3D(xx, yy, Z, colors='k', levels=[-1, 0, 1], alpha=0.5, linestyles=['--', '-', '--'])
 
 # Add labels and legend
-ax.set_xlabel('Dimension 1')
-ax.set_ylabel('Dimension 2')
-ax.set_zlabel('Dimension 3')
-ax.legend()
-plt.title('SVM Classification with Decision Boundary')
+#ax.set_xlabel('Dimension 1')
+#ax.set_ylabel('Dimension 2')
+#ax.set_zlabel('Dimension 3')
+#ax.legend()
+#plt.title('SVM Classification with Decision Boundary')
 
 # Show the plot
-plt.show()
+#plt.show()
