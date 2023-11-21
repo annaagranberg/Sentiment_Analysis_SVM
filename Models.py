@@ -18,10 +18,8 @@ import re
 
 #--------------------------- From Clean_Vectorize.py ---------------------------#
 
-# Load the variables from the file
 loaded_data = np.load('encoded_data.npz')
 
-# Access the variables
 train_x_0 = loaded_data['train_x_0']
 train_y_0 = loaded_data['train_y_0']
 test_x_0 = loaded_data['test_x_0']
@@ -31,7 +29,6 @@ train_x_1 = loaded_data['train_x_1']
 train_y_1 = loaded_data['train_y_1']
 test_x_1 = loaded_data['test_x_1']
 test_y_1 = loaded_data['test_y_1']
-
 
 #----------------------------- MODELS -------------------------------#
 
@@ -87,4 +84,4 @@ print(acc(test_y_1,svc_1.predict(test_x_1)))
 # 0.946817785527463 with DBOW
 # 0.8918918918918919 with DM 
 
-print(train_x)
+
