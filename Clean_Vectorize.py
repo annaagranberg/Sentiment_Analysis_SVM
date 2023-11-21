@@ -120,4 +120,5 @@ test_x_0, test_y_0 = vec_for_learning(models[0], test_tagged)
 train_x_1, train_y_1 = vec_for_learning(models[1], train_tagged)
 test_x_1, test_y_1 = vec_for_learning(models[1], test_tagged)
 
-
+np.savez('encoded_data.npz', train_x_0=train_x_0, train_y_0=train_y_0, test_x_0=test_x_0, test_y_0=test_y_0,
+         train_x_1=train_x_1, train_y_1=train_y_1, test_x_1=test_x_1, test_y_1=test_y_1)
