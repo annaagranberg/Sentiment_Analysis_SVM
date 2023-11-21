@@ -16,7 +16,17 @@ test_y_1 = loaded_data['test_y_1']
 
 # Check the dimensions of the data
 print(len(train_x_0), len(train_y_0))
-print(test_x_0.shape, test_y_0.shape)
+print(train_x_0.shape, train_y_0.shape)
+
+# Slutsatser: 
+
+# X är (4588, 300) där 4588 är antalet dokument och 300 är längden på vektorn som representerar ett dokument 
+# Y är (4588, 1) och representerar integers (0, 1, 2) alltså typen av bias.
+
+# print(train_y_0[0:10]) -> [1,1,1,2,1,0,0,2,0,0]
+
+
+
 
 # Plotting with PCA 
 
@@ -49,5 +59,7 @@ cbar.set_label('Class Label')
 
 # Show the plot
 plt.show()
+
+
 
 
