@@ -47,8 +47,8 @@ print(acc(test_y_1,forest_1.predict(test_x_1)))
 
 # -------- Support Vector Machine from sklearn ---------
 svc_1 = SVC()
-svc_1.fit(train_x_1,train_y_1)
 svc_0 = SVC()
+svc_1.fit(train_x_1,train_y_1)
 svc_0.fit(train_x_0,train_y_0)
 
 print("Support Vector Machine")
