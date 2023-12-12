@@ -15,7 +15,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import re
 
-# nltk.download('punkt') // Behövs första gången
+# nltk.download('punkt') // Only needed for the first time
 
 dataset = pd.read_csv('content/DataSet.csv', header=0)
 dataset = dataset.drop('url',axis=1) # Drop the URLs
